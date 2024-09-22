@@ -12,6 +12,8 @@
 
 // })
 
+//lesson 4
+
 // arrays
 
 let names = ['luigi','mario','yoshi'];
@@ -51,6 +53,8 @@ ninja = {
     // skills: []
 }
 
+//lesson 5
+
 //explicit types
 let character: string;
 let age: number;
@@ -88,3 +92,22 @@ let ninjaTwo: {
     age: number,
     beltColour: string
 }
+
+// lesson 6
+
+let l6age: any = 25;
+
+l6age = true;
+console.log(l6age);
+l6age = "hello";
+console.log(l6age)
+l6age = {name: 'luigi'};
+console.log(l6age);
+
+let l6ninja: {name: any, age: any};
+
+l6ninja = {name: 'yoshi', age: 25};
+console.log(l6ninja);
+
+l6ninja = {name: 25, age: 'yoshi'};
+console.log(l6ninja);

@@ -6,6 +6,7 @@
 // inputs.forEach(input => {
 //     console.log(input);
 // })
+//lesson 4
 // arrays
 let names = ['luigi', 'mario', 'yoshi'];
 names.push('toad');
@@ -34,6 +35,7 @@ ninja = {
     age: 40,
     // skills: []
 };
+//lesson 5
 //explicit types
 let character;
 let age;
@@ -56,3 +58,16 @@ uid = 123;
 let ninjaOne;
 ninjaOne = { name: 'yoshi', age: 30 };
 let ninjaTwo;
+// lesson 6
+let l6age = 25;
+l6age = true;
+console.log(l6age);
+l6age = "hello";
+console.log(l6age);
+l6age = { name: 'luigi' };
+console.log(l6age);
+let l6ninja;
+l6ninja = { name: 'yoshi', age: 25 };
+console.log(l6ninja);
+l6ninja = { name: 25, age: 'yoshi' };
+console.log(l6ninja);
