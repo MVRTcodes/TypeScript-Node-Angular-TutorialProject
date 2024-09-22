@@ -1,11 +1,11 @@
 "use strict";
-const character = 'luigi';
-console.log(character);
-const inputs = document.querySelectorAll('input');
-console.log(inputs);
-inputs.forEach(input => {
-    console.log(input);
-});
+// const character = 'luigi';
+// console.log(character);
+// const inputs = document.querySelectorAll('input');
+// console.log(inputs);
+// inputs.forEach(input => {
+//     console.log(input);
+// })
 // arrays
 let names = ['luigi', 'mario', 'yoshi'];
 names.push('toad');
@@ -34,3 +34,25 @@ ninja = {
     age: 40,
     // skills: []
 };
+//explicit types
+let character;
+let age;
+let isLoggedIn;
+age = 30;
+isLoggedIn = true;
+//arrays
+let ninjas = [];
+ninjas.push('shaun');
+//union types
+let mixed2 = [];
+mixed2.push('hello');
+mixed2.push(23);
+mixed2.push(false);
+console.log(mixed2);
+let uid;
+uid = '123';
+uid = 123;
+//objects
+let ninjaOne;
+ninjaOne = { name: 'yoshi', age: 30 };
+let ninjaTwo;

@@ -1,16 +1,16 @@
-const character = 'luigi';
+// const character = 'luigi';
 
-console.log(character);
+// console.log(character);
 
-const inputs = document.querySelectorAll('input');
+// const inputs = document.querySelectorAll('input');
 
-console.log(inputs);
+// console.log(inputs);
 
-inputs.forEach(input => {
+// inputs.forEach(input => {
 
-    console.log(input);
+//     console.log(input);
 
-})
+// })
 
 // arrays
 
@@ -49,4 +49,42 @@ ninja = {
     belt: 'orange',
     age: 40,
     // skills: []
+}
+
+//explicit types
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
+
+age = 30;
+isLoggedIn = true;
+
+//arrays
+
+let ninjas: string[] = [];
+
+ninjas.push('shaun');
+
+//union types
+let mixed2: (string|number|boolean)[] = [];
+
+mixed2.push('hello');
+mixed2.push(23);
+mixed2.push(false);
+
+console.log(mixed2);
+
+let uid: string|number;
+uid = '123';
+uid = 123;
+
+//objects
+
+let ninjaOne: object;
+ninjaOne = { name: 'yoshi', age: 30}
+
+let ninjaTwo: {
+    name: string,
+    age: number,
+    beltColour: string
 }
