@@ -8,6 +8,7 @@
 
 // const form = document.querySelector('form')!;
 
+
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 // console.log(form.children);
 
@@ -26,3 +27,36 @@ form.addEventListener('submit', (e: Event) => {
         amount.valueAsNumber
     );
 })
+
+//classes lesson 12
+
+class Invoice {
+    client: string;
+    details: string;
+    amount: number;
+
+    constructor(c: string, d: string, a: number){
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
+
+    format() {
+        return `${this.client} owes ${this.amount} for ${this.details}`
+    }
+}
+
+const invOne = new Invoice('Mario','work on the mario website', 300);
+const invTwo = new Invoice('Luigi','work on the luigi website', 250);
+
+let invoices: Invoice[] = [];
+
+invoices.push(invOne);
+invoices.push(invTwo);
+
+invOne.client = 'yoshi';
+invTwo.amount = 500;
+
+console.log(invOne,invTwo);
+
+console.log(invoices);
