@@ -1,20 +1,13 @@
-//interfaces
-const me = {
-    name: 'shaun',
-    age: 30,
-    speak(text) {
-        console.log(text);
-    },
-    spend(amount) {
-        console.log('I spent', amount);
-        return amount;
-    }
-};
-const greetPerson = (person) => {
-    console.log('hello', person.name);
-};
-greetPerson(me);
 import { Invoice } from './classes/Invoice.js';
+import { Payment } from './classes/Payment.js';
+// let docOne: HasFormatter;
+// let docTwo: HasFormatter;
+// docOne = new Invoice('yoshi','web work', 250);
+// docTwo = new Invoice('mario', 'plumbling work', 200);
+// let docs: HasFormatter[] = [];
+// docs.push(docOne);
+// docs.push(docTwo);
+// console.log(docs);
 const invOne = new Invoice('Mario', 'work on the mario website', 300);
 const invTwo = new Invoice('Luigi', 'work on the luigi website', 250);
 let invoices = [];
@@ -30,5 +23,34 @@ const details = document.querySelector('#details');
 const amount = document.querySelector('#amount');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
+    let doc;
+    if (type.value === 'invoice') {
+        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    else {
+        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    console.log(doc);
 });
+//interfaces
+// interface IsPerson {
+//     name: string;
+//     age: number;
+//     speak(a: string): void;
+//     spend(a: number): number;
+// }
+// const me: IsPerson = {
+//     name: 'shaun',
+//     age: 30,
+//     speak(text: string): void {
+//         console.log(text);
+//     },
+//     spend(amount: number): number {
+//         console.log('I spent', amount);
+//         return amount;
+//     }
+// }
+// const greetPerson = (person: IsPerson) => {
+//     console.log('hello', person.name);
+// }
+//greetPerson(me);
