@@ -19,3 +19,25 @@ const logDetails = (uid, item) => {
 const l9greet = (user) => {
     console.log(`${user.name} says hello`);
 };
+// lesson 10
+// let l10greet: Function;
+//example 1
+let l10greet;
+l10greet = (name, greeting) => {
+    console.log(`${name} says ${greeting}`);
+};
+// example 2
+let l10calc;
+l10calc = (numOne, numTwo, action) => {
+    if (action == 'add') {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne - numTwo;
+    }
+};
+// example 3
+let l10logDetails;
+l10logDetails = (ninja) => {
+    console.log(`${ninja.name} is ${ninja.age} years old`);
+};
