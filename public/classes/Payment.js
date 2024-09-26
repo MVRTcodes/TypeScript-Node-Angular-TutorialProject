@@ -1,3 +1,4 @@
+//clase Pagos
 export class Payment {
     constructor(recipient, details, amount) {
         this.recipient = recipient;
@@ -5,6 +6,6 @@ export class Payment {
         this.amount = amount;
     }
     format() {
-        return `${this.recipient} is owed ${this.amount} for ${this.details}`;
+        return `${this.recipient} le deben ${this.amount}€. Motivo: ${this.details}`;
     }
 }

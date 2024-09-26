@@ -1,5 +1,7 @@
 import { HasFormatter } from "../interfaces/HasFormatter";
 
+//clase Pagos
+
 export class Payment implements HasFormatter {
 
     constructor(
@@ -9,6 +11,6 @@ export class Payment implements HasFormatter {
     ){}
 
     format() {
-        return `${this.recipient} is owed ${this.amount} for ${this.details}`
+        return `${this.recipient} le deben ${this.amount}€. Motivo: ${this.details}`
     }
 }

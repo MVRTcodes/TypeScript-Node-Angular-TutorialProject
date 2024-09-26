@@ -1,3 +1,4 @@
+//clase Recibos
 export class Invoice {
     //3 types public private readonly
     // readonly client: string;
@@ -9,6 +10,6 @@ export class Invoice {
         this.amount = amount;
     }
     format() {
-        return `${this.client} owes ${this.amount} for ${this.details}`;
+        return `${this.client} debe ${this.amount}€. Motivo: ${this.details}`;
     }
 }
