@@ -31,37 +31,31 @@ form.addEventListener('submit', (e: Event) => {
     console.log(doc);
 })
 
+//enum
+
+enum ResourceType { BOOK, AUTHOR, FILM, DIRECTOR, PERSON };
+
 //Generics
-
-const addUID = <T>(obj: object) => {
-    let uid = Math.floor(Math.random() * 100);
-    return {...obj, uid};
-}
-
-let docOne = addUID({name: 'yoshi', age: 40});
-
-console.log(docOne);
 
 interface Resource<T> {
     uid: number;
-    resourceName: string;
+    resourceType: ResourceType;
     data: T;
 }
 
 const docTwo: Resource<object> = {
     uid: 1,
-    resourceName: 'person',
-    data: {name: 'shaun'}
+    resourceType: ResourceType.BOOK,
+    data: { title: 'name of the wind' }
 }
 
-const docThree: Resource<string[]> = {
+const docThree: Resource<object> = {
     uid: 2,
-    resourceName: 'shoppingList',
-    data: ['bread','milk','toilet roll']
+    resourceType: ResourceType.DIRECTOR,
+    data: { title: 'yoshi' }
 }
 
-console.log(docTwo);
-console.log(docThree);
+console.log(docTwo, docThree);
 
 //interfaces
 
